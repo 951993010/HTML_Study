@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head><title>表单</title></head>
+<body>
+
+<!--表单最基本的标签：<form>
+	表单的属性：
+	action<>="" 提交路径到jsp servlet
+	method="" get或post，默认是get
+	-->
+<!--输入框：<input/>
+	数据类型：type="" text文本框、 password密码、 radio单选择、checkbox多选、submit提交按钮 reset重置按钮、button普通按钮（后期自定义）、image图片按钮、hidden隐藏控件
+	数据名：name="" 用于后端识别信息
+	默认值：value=""
+	最大长度：maxlength=""
+	提示信息：placeholder=""-->
+<form action="204表格布局实战-整体布局控制.html" method="post" name="registerform">
+<tr>
+<td><input type="hidden" name="id" value="100" /></td>
+</tr>
+<table>
+<tr><td>用户名：</td><td><input type="text" name="username" maxlength="6" placeholder="请输入用户名"/></td></tr>
+<tr><td>密码：</td><td><input type="password" name="password" placeholder="请输入密码"/></td></tr>
+<tr><td>密码：</td><td><input type="password" name="repassword" placeholder="请输入密码"/></td></tr>
+<tr><td>性别：</td><td><input type="radio" name="sex" value="man" checked="true"/>男<input type="radio" name="sex" value="women"/>女</td></tr>
+<tr>	
+	<td>爱好</td><td><input type="checkbox" name="hobby"/ value="read">读书<input type="checkbox" name="hobby" value="movie"/>看电影<input type="checkbox" name="hobby" value="palyball"/>打球</td>
+</tr>
+
+<!--<select>下拉列表<option>
+	<select> size="3" multiple：多选-->
+
+<tr>	
+	<td>生日</td><td>
+	<select name="month">
+		<option value="1">1月</option>
+		<option value="2">2月</option>
+		<option>3月</option>
+		<option>4月</option>
+		<option>5月</option>
+		<option>6月</option>
+		<option>7月</option>
+		<option>8月</option>
+		<option>9月</option>
+		<option>10月</option>
+		<option>11月</option>
+		<option>12月</option>
+	</select>
+	</td>
+</tr>
+
+<!--<textarea><textarea/>大段文本域
+	style="resize:none"禁止拉伸-->
+<tr>
+	<td>交友宣言</td><td><textarea style="resize:none"  name="message" placeholder="可以说一下你的交友理由" rows="10" cols="30"></textarea></td>
+</tr>
+
+<!--<input type="file">文件上传
+	文件上传空间需要把<form>改成<form method="post" enctype="multipart/form-data">-->
+<tr>
+	<td>简历</td><td><input type="file" name="resume"></td>
+</tr>
+<tr>
+	<td colspan="2" align="center"> <input type="reset" value="重置"><input type="submit" name="register" value="注册"><input type="button" value="普通按钮"></td>
+</tr>
+<tr>
+<td colspan="2" align="center"> <input type="image" src="img/02.jpg"></td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>
